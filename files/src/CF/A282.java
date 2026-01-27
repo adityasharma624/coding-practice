@@ -13,9 +13,8 @@ public class A282 {
 
         while (no_of_iterations > 0) {
             String input = sc.nextLine();
-            char[] temp = input.toCharArray();
 
-            if (temp[1] == '+')
+            if (input.charAt(1) == '+')
                 result++;
             else
                 result--;
