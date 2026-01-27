@@ -15,8 +15,30 @@ package GFG;
 public class searchInAnAlmostSortedArray {
     static void main() {
         int[] nums = {10, 3, 40, 20, 50, 80, 70};
-        int target = 90;
-        System.out.println(findTarget(nums, target));
+        int target = 3;
+        System.out.println(findTargetGFG(nums, target));
+    }
+
+    static int findTargetGFG(int[] nums, int target)
+    {
+        int start = 0, end = nums.length - 1;
+        while (start <= end)
+        {
+            int mid = start + (end - start)/2;
+            if (nums[mid] == target)
+                return mid;
+            else if (mid > start && nums[mid-1] == target)
+                return mid -1;
+            else if (mid < end && nums[mid + 1] == target)
+                return mid + 1;
+
+            if (nums[mid] > target)
+                end = mid - 2;
+            else
+                start = mid + 2;
+        }
+
+        return -1;
     }
 
     static int findTarget(int[] nums, int target)
