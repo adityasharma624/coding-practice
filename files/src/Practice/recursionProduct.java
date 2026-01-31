@@ -1,0 +1,14 @@
+package Practice;
+
+public class recursionProduct {
+    static void main() {
+        System.out.println(product(6));
+    }
+
+    static int product(int n)
+    {
+        if (n == 1)
+            return 1;
+        return n * product(n-1);
+    }
+}
