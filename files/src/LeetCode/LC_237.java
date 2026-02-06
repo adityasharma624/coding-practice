@@ -8,18 +8,6 @@ Medium
 
 package LeetCode;
 
-
-class ListNode
-{
-    int val;
-    ListNode next;
-    ListNode(int x)
-    {
-        val = x;
-        next = null;
-    }
-}
-
 public class LC_237 {
     static void main() {
         ListNode head = new ListNode(4);
