@@ -27,7 +27,7 @@ public class LC_237 {
         delete.next = null;
     }
 
-    private static void printLL(ListNode root)
+    static void printLL(ListNode root)
     {
         ListNode temp = root;
         while (temp!=null)
