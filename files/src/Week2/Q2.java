@@ -16,7 +16,7 @@ public class Q2 {
         int supplies = scanner.nextInt();
         scanner.close();
 
-        Arrays.sort(checkpoints, Comparator.comparingInt(a -> a[0]));
+        Arrays.sort(checkpoints, Comparator.comparingInt(a -> a[0]));   // because "checkpoints must be visited in increasing height order."
 
         int currentHeight = 0;
         int count = 0;
@@ -24,13 +24,13 @@ public class Q2 {
             int height = checkpoints[i][0];
             int gain = checkpoints[i][1];
             int cost = height - currentHeight;
-            if (supplies < cost) {
+            if (supplies < cost) {                                          // can't climb, if no supplies
                 break;
             }
             supplies -= cost;
             supplies += gain;
             currentHeight = height;
-            count++;
+            count++;                                                        // increment count
         }
 
         System.out.println(count);
